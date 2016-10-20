@@ -2,6 +2,9 @@ doctype html
 html
   head
     title= title
+    meta(property="og:title", content="EscogeME "+coleccion.toUpperCase())
+    meta(property="og:description", content="Escoge las opciones que quieras")
+    meta(property="og:image", content="./images/"+colection+"/thums.png")
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stilesheet', href='/stylesheets/angular-material.min.css')
     script(type="text/javascript", src=rootPath+"javascripts/angular.min.js")
