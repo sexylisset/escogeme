@@ -8,7 +8,7 @@ router.get('/:colec/:opt/:tipo/:id', function(req, res, next) {
         coleccion:req.params.colec,
         opt:req.params.opt,
         tipo:req.params.tipo,
-        id:req.params.id
+        id:(Math.ceil(Math.random() * (parseInt(req.params.id))))
     });
 });
 

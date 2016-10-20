@@ -5,6 +5,6 @@ block content
   div.wrap
     md-card.box.big(md-whiteframe="7", style="background-image: url(../images/"+coleccion+'/'+sel+".gif)")
       div.botones
-        a(href="../{{b.action.url}}/"+coleccion+"/{{b.action.tipo}}/{{b.id}}/{{b.action.imageRam()}}/", ng-repeat="b in culonas.options")
+        a(href="../{{b.action.url}}/"+coleccion+"/{{b.action.tipo}}/{{b.id}}/{{b.action.image.length}}/", ng-repeat="b in culonas.options")
           md-buton.md-fab(aria-label="{{b.name.esp}}")
             md-icon(md-svg-src="../images/"+coleccion+'/{{b.icon}}')

@@ -1,9 +1,9 @@
 extends layout
 
 block content
-  h1= title
-  p {{culonas.titulo.eng}}, {{culonas.titulo.esp}}
   div.wrap
+    h1= title
+    p {{culonas.titulo.eng}}, {{culonas.titulo.esp}}
     - for(var i=1; i<=40; i++){
       a(href="./wind/"+i)
         md-card.box.sel(md-whiteframe="7", style="background-image: url(images/"+coleccion+'/'+i+".gif)")
