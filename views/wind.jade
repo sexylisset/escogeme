@@ -1,10 +1,11 @@
 extends layout
 
 block content
-  h1= title
+  span(ng-init="doc.options = getColection('"+coleccion+"').options")
   div.wrap
-    md-card.box.big(md-whiteframe="7", style="background-image: url(../images/"+coleccion+'/'+sel+".gif)")
+    h1= title
+    md-card.box.big(md-whiteframe="7", style="background-image: url("+rootPath+"images/"+coleccion+'/'+sel+".gif)")
       div.botones
-        a(href="../{{b.action.url}}/"+coleccion+"/{{b.action.tipo}}/{{b.id}}/{{b.action.image.length}}/", ng-repeat="b in culonas.options")
-          md-buton.md-fab(aria-label="{{b.name.esp}}")
-            md-icon(md-svg-src="../images/"+coleccion+'/{{b.icon}}')
+        a(href="../{{b.action.url}}/"+coleccion+"/{{b.action.tipo}}/{{b.id}}/{{b.action.image.length}}/", ng-repeat="b in doc.options")
+          md-button.md-fab(aria-label="{{b.name.esp}}")
+            md-icon(md-svg-src=rootPath+"images/"+coleccion+'/{{b.icon}}')

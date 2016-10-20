@@ -2,12 +2,24 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/:sel', function(req, res, next) {
+router.get('/:col/:sel', function(req, res, next) {
+  console.log(req.params.col);
   res.render('wind', {
-    rootPath:'../',
+    rootPath:'../../',
     title: 'EscogeME',
     sel: req.params.sel,
-    coleccion:'culitos'
+    coleccion:req.params.col
+  });
+});
+
+router.get('/showimage/:colec/:opt/:tipo/:id', function(req, res, next) {
+  res.render('showimage', {
+    rootPath:'../../../../../../',
+    title: 'EscogeME',
+    coleccion:req.params.colec,
+    opt:req.params.opt,
+    tipo:req.params.tipo,
+    id:(Math.ceil(Math.random() * (parseInt(req.params.id))))
   });
 });
 

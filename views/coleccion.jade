@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  span(ng-init="doc.titulo = getColection('"+coleccion+"').titulo")
+  div.wrap
+    h1= title+' '+coleccion.toUpperCase()
+    p {{doc.titulo.eng}}, {{doc.titulo.esp}}
+    - for(var i=1; i<=40; i++){
+      a(href="./wind/"+coleccion+"/"+i)
+        md-card.box.sel(md-whiteframe="7", style="background-image: url(images/"+coleccion+'/'+i+".gif)")
+          span.num
+            | #{i}
+    - }
