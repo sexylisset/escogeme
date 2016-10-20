@@ -5,6 +5,7 @@ body {
 
 a {
   color: #00B7FF;
+  text-decoration: none;
 }
 .wrap{
   display: block;
@@ -26,10 +27,9 @@ a {
     width: 323px;
     height: 247px;
     cursor: pointer;
-    background-size: auto 100%; 
+    background-size: auto 100%;
   }
   &.sel:hover{
-    margin: 2px;
     border: 3px solid rgba(169, 16, 30, 0.7);
   }
   &.action{
@@ -40,19 +40,11 @@ a {
   .botones{
     padding-top: 200px;
     height: 75px;
-    md-buton{
-      border-radius: 100%;
-      background: rgba(255, 255, 255, 0.7);
-      display: inline-block;
-      padding: 10px;
-      width: 50px;
-      height: 50px;
-      cursor: pointer;
-      margin: 0 15px;
-      &:hover{
-        background: rgba(255, 246, 0, 1);
-
-      }
+    md-icon{
+      height: 33px;
+      width: 33px;
+      min-height: 33px;
+      min-width: 33px;
     }
   }
   .num{
@@ -68,5 +60,25 @@ a {
     text-align: center;
     line-height: 1.8em;
     border: 1px solid rgba(0,0,0,.5);
+  }
+}
+
+md-card{
+  width: 50%;
+  md-card-title{
+    padding: 0 !important;
+    md-card-title-media{
+      margin-top: 0 !important;
+      .md-media-xl{
+        height: 250px;
+        width: 200px;
+      }
+    }
+    md-card-title-text{
+      padding: 10px 24px;
+      .md-headline{
+        text-transform: capitalize;
+      }
+    }
   }
 }
